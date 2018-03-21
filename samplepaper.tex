@@ -1,0 +1,81 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Proof of Storage Cryptocurrencies}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Panos Chatzigiannis\inst{1} \and
+Second Author\inst{1} \and
+Third Author\inst{1}}
+%
+\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{
+George Mason University, ISA656 Class project,\\
+\email{\{pchatzig,author2,author3\}@gmu.edu}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Preliminary report. After spending enough time researching your topic you have to provide a summary of your proposal. Describe the main idea of the attack or protocol you will be presenting in 1-2 paragraphs. Include the main resources you are using (academic papers, white papers, new articles, blog posts etc). Finally, provide a list of items that you plan to include in your final report and presentation. I.e. Related work, specific background that you plan to cover, technical details, demo etc (think of this as the outline/sections of your report and presentation). The list your will provide is a commitment to what the instructor should expect in your final report and presentation. You will receive comments in your preliminary report and might need to re-adjust your goals.
+
+\keywords{Proof of storage  \and SiaCoin \and Storj}
+\end{abstract}
+%
+%
+%
+\section{Preliminary report}
+\subsection{Introduction}
+
+In our project, we will research on Proof of Storage cryptocurrencies. While most cryptocurrencies like Bitcoin \cite{satoshi_white} mainly focus on performing monetary transactions on a blockchain-based ledger, Proof of Storage cryptocurrencies suggest to take one step further and create a "decentralized cloud storage" platform. We will focus on two such cryptocurrencies, Sia and Storj. We will attempt to describe their underlying protocol in a more formal way along with more technical details, as their corresponding whitepapers only provide a high level description. Our sources for these analyses will be github repositories, forum and reddit posts in addition to the whitepapers. We will also attempt to include a live demo, making a direct comparison between the two, and possibly exploring weaknesses and/or attack vectors.
+
+\subsection{Sia}
+Sia\cite{sia_white} is considered a Bitcoin derivative that also offers publicly-verifiable storage contracts. According to these contracts, a number of hosts agree to store encrypted pieces of the clients' data, in exchange for Sia coins. Each host is audited and required to present a proof that he indeed owns the piece of the data he committed to store, then receiving a reward if he succeeds or losing his collateral (which comes from the host's time-locked coins) if he fails. In this project we will attempt to highlight several technical details of the protocol which are not well-defined in the whitepaper, such as hash functions used, algorithm for file ownership proofs, host-client exchange protocol and block content-formatting. We will also include a description and a demo of the Sia client, primarily focused on the data storage functionalities rather than the mining or coin transaction aspects which are similar to other Proof-of-Work cryptocurrencies. If during our analysis we find any potential attacks on the protocol we will attempt to explore these as well.
+
+\subsection{Storj}
+
+\begin{thebibliography}{8}
+
+\bibitem{satoshi_white}
+Bitcoin: A peer-to-peer electronic cash system, \url{http://bitcoin.org/bitcoin.pdf}.
+
+
+\bibitem{sia_white}
+Sia: Simple Decentralized Storage whitepaper, \url{https://sia.tech/sia.pdf}. Last accessed 20
+Mar 2018
+
+
+\bibitem{sia_bitcointalk}
+Sia BitcoinTalk subforum, \url{https://bitcointalk.org/index.php?topic=1060294}. Last accessed 21
+Mar 2018
+
+\bibitem{sia_wiki}
+Sia Wiki, \url{https://siawiki.tech/index}. Last accessed 21
+Mar 2018
+
+\bibitem{sia_wiki}
+Sia Client, \url{https://github.com/NebulousLabs/Sia}. Last accessed 21
+Mar 2018
+\end{thebibliography}
+
+
+
+\end{document}
